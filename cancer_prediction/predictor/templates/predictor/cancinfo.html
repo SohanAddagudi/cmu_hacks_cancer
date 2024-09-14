@@ -1,0 +1,282 @@
+<!-- templates/predictor/error.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Error</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #2c2c2c7e;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100vh;
+        }
+        nav {
+            width: 100%;
+            background-color: #007bff;
+            padding: 10px;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            margin: 0;
+            padding: 0;
+        }
+        nav ul li {
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+        .form-container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+        }
+        h2 {
+            margin-bottom: 20px;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        input[type="file"] {
+            margin-bottom: 10px;
+        }
+        button {
+            padding: 10px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        h1 {
+            color: #000000;
+        }
+        .cancer-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        .cancer-container {
+            background-color: #fff;
+            width: 1000px; /* Fixed width */
+            min-height: 50px; /* Minimum height to ensure uniformity */
+            max-height: 50px; /* Maximum height */
+            overflow: hidden; /* Hides overflow if the text is too long */
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
+            margin: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .cancer-container h2 {
+            color: #007bff;
+            font-size: 18px;
+            margin: 0;
+        }
+        .cancer-container p {
+            font-size: 14px;
+            color: #555;
+        }
+
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="{% url 'upload' %}">Main Page</a></li>
+            <li><a href="{% url 'heatmaps' %}">Heatmaps Page</a></li>
+            <li><a href="{% url 'cancinfo' %}">Cancer Info Page</a></li>
+        </ul>
+    </nav>
+    <h1>Types of Cancer</h1>
+
+    <div class="cancer-container">
+        <h2>Adrenocortical Carcinoma</h2>
+        <p>Adrenocortical carcinoma is a rare type of cancer that affects the outer layer of the adrenal glands, responsible for hormone production.</p>
+    </div>
+
+    <div class="cancer-container">
+        <h2>Bladder Urothelial Carcinoma</h2>
+        <p>Bladder urothelial carcinoma is the most common type of bladder cancer, originating in the cells lining the bladder.</p>
+    </div>
+
+    <div class="cancer-container">
+        <h2>Breast Invasive Carcinoma</h2>
+        <p>Breast invasive carcinoma refers to cancer that has spread from the milk ducts or lobules into nearby breast tissue.</p>
+    </div>
+
+    <div class="cancer-container">
+        <h2>Cervical Squamous Cell Carcinoma</h2>
+        <p>This type of cervical cancer develops in the squamous cells lining the cervix, typically due to HPV infection.</p>
+    </div>
+
+    <div class="cancer-container">
+        <h2>Cholangiocarcinoma</h2>
+        <p>Cholangiocarcinoma is a cancer that arises from the bile ducts, which carry bile from the liver to the small intestine.</p>
+    </div>
+
+    <div class="cancer-container">
+        <h2>Colon Adenocarcinoma</h2>
+        <p>Colon adenocarcinoma is the most common form of colorectal cancer, beginning in the mucus-producing glands of the colon.</p>
+    </div>
+
+    <div class="cancer-container">
+        <h2>Diffuse Large B-cell Lymphoma</h2>
+        <p>Diffuse large B-cell lymphoma is a fast-growing type of non-Hodgkin lymphoma that affects B lymphocytes, a type of white blood cell.</p>
+    </div>
+
+    <div class="cancer-container">
+        <h2>Esophageal Carcinoma</h2>
+        <p>Esophageal carcinoma is a cancer that occurs in the tissues of the esophagus, which carries food and liquid to the stomach.</p>
+    </div>
+
+    <div class="cancer-container">
+        <h2>Glioblastoma Multiforme</h2>
+        <p>Glioblastoma multiforme is an aggressive type of brain cancer that forms in the glial cells supporting the brain's nerve cells.</p>
+    </div>
+
+    <div class="cancer-container">
+        <h2>Head and Neck Squamous Cell Carcinoma</h2>
+        <p>This cancer affects the squamous cells in the mucosal surfaces of the head and neck, including the mouth, throat, and nose.</p>
+    </div>
+
+    <div class="cancer-container">
+        <h2>Kidney Chromophobe</h2>
+        <p>Kidney chromophobe carcinoma is a rare form of kidney cancer that typically has a better prognosis than other kidney cancers.</p>
+    </div>
+
+    <div class="cancer-container">
+        <h2>Kidney Renal Cell Carcinoma</h2>
+        <p>Kidney renal cell carcinoma is the most common type of kidney cancer, developing in the small tubes that filter blood.</p>
+    </div>
+
+    <div class="cancer-container">
+        <h2>Kidney Renal Papillary Cell Carcinoma</h2>
+        <p>This type of kidney cancer forms in the lining of the kidney's tubules, often leading to slow-growing tumors.</p>
+    </div>
+
+    <div class="cancer-container">
+        <h2>Acute Myeloid Leukemia</h2>
+        <p>Acute myeloid leukemia is a fast-growing cancer of the blood and bone marrow, affecting immature white blood cells.</p>
+    </div>
+
+    <div class="cancer-container">
+        <h2>Brain Lower Grade Glioma</h2>
+        <p>Brain lower grade gliomas are slower-growing brain tumors that arise from the glial cells supporting the nervous system.</p>
+    </div>
+
+    <div class="cancer-container">
+        <h2>Liver Hepatocellular Carcinoma</h2>
+        <p>Liver hepatocellular carcinoma is the most common type of primary liver cancer, often linked to chronic liver disease and cirrhosis.</p>
+    </div>
+
+    <div class="cancer-container">
+        <h2>Lung Adenocarcinoma</h2>
+        <p>Lung adenocarcinoma is the most common form of non-small cell lung cancer, often found in the outer areas of the lung.</p>
+    </div>
+
+    <div class="cancer-container">
+        <h2>Lung Squamous Cell Carcinoma</h2>
+        <p>This type of lung cancer originates in the flat squamous cells lining the airways of the lung.</p>
+    </div>
+
+    <div class="cancer-container">
+        <h2>Mesothelioma</h2>
+        <p>Mesothelioma is a rare cancer that forms in the lining of the lungs, abdomen, or heart, typically caused by asbestos exposure.</p>
+    </div>
+
+    <div class="cancer-container">
+        <h2>Ovarian Serous Cystadenocarcinoma</h2>
+        <p>Ovarian serous cystadenocarcinoma is the most common type of ovarian cancer, forming in the tissue covering the ovary.</p>
+    </div>
+
+    <div class="cancer-container">
+        <h2>Pancreatic Adenocarcinoma</h2>
+        <p>Pancreatic adenocarcinoma arises in the pancreas's ducts, where digestive enzymes are produced.</p>
+    </div>
+
+    <div class="cancer-container">
+        <h2>Pheochromocytoma and Paraganglioma</h2>
+        <p>These are rare tumors that develop in the adrenal glands or nearby nerve tissues, affecting hormone production.</p>
+    </div>
+
+    <div class="cancer-container">
+        <h2>Prostate Adenocarcinoma</h2>
+        <p>Prostate adenocarcinoma is the most common type of prostate cancer, originating in the gland cells of the prostate.</p>
+    </div>
+
+    <div class="cancer-container">
+        <h2>Rectum Adenocarcinoma</h2>
+        <p>Rectum adenocarcinoma is a form of colorectal cancer that develops in the tissue lining the rectum.</p>
+    </div>
+
+    <div class="cancer-container">
+        <h2>Sarcoma</h2>
+        <p>Sarcomas are a group of cancers that originate in the bones, muscles, fat, or connective tissues.</p>
+    </div>
+
+    <div class="cancer-container">
+        <h2>Skin Cutaneous Melanoma</h2>
+        <p>Melanoma is a skin cancer that develops in the melanocytes, the cells that produce pigment in the skin.</p>
+    </div>
+
+    <div class="cancer-container">
+        <h2>Stomach Adenocarcinoma</h2>
+        <p>Stomach adenocarcinoma is the most common type of stomach cancer, developing in the glandular cells of the stomach lining.</p>
+    </div>
+
+    <div class="cancer-container">
+        <h2>Testicular Germ Cell Tumors</h2>
+        <p>Testicular germ cell tumors are the most common form of testicular cancer, often developing in young men.</p>
+    </div>
+
+    <div class="cancer-container">
+        <h2>Thyroid Carcinoma</h2>
+        <p>Thyroid carcinoma is the most common cancer of the thyroid gland, affecting hormone regulation in the body.</p>
+    </div>
+
+    <div class="cancer-container">
+        <h2>Thymoma</h2>
+        <p>Thymoma is a rare cancer of the thymus gland, located in the upper chest, and is often associated with autoimmune diseases.</p>
+    </div>
+
+    <div class="cancer-container">
+        <h2>Uterine Corpus Endometrial Carcinoma</h2>
+        <p>This type of uterine cancer forms in the lining of the uterus and is commonly referred to as endometrial cancer.</p>
+    </div>
+
+    <div class="cancer-container">
+        <h2>Uterine Carcinosarcoma</h2>
+        <p>Uterine carcinosarcoma is a rare and aggressive cancer that has features of both carcinoma and sarcoma.</p>
+    </div>
+
+    <div class="cancer-container">
+        <h2>Uveal Melanoma</h2>
+        <p>Uveal melanoma is a rare cancer that arises in the eye's uveal tract, affecting structures such as the iris and choroid.</p>
+    </div>
+
+    <div class="cancer-container">
+        <h2>Normal</h2>
+        <p>No cancer detected. This category indicates a healthy state.</p>
+    </div>
+</body>
+</html>
